@@ -30,5 +30,5 @@ data class WeatherMainInfo(
     @SerializedName("pressure")
     val pressure: Int,
     @SerializedName("humidity")
-    val humidity: Int
+    val humidity: Double,
 )

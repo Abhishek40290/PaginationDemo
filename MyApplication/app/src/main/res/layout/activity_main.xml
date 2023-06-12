@@ -4,26 +4,107 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:padding="16dp"
+    android:background="#242343"
     tools:context=".MainActivity">
 
-    <Button
-        android:id="@+id/btnGetWeather"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:text="Get Weather" />
+    <RelativeLayout
+        android:id="@+id/bottom"
+        android:layout_width="match_parent"
+        android:layout_height="50dp"
+        android:layout_centerInParent="true"
+        android:layout_alignParentBottom="true"
+        android:layout_marginBottom="40dp">
 
-    <TextView
-        android:id="@+id/tvWeatherDescription"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_below="@id/btnGetWeather"
-        android:layout_marginTop="16dp" />
+        <Button
+            android:id="@+id/btnGetWeather"
+            android:layout_width="300dp"
+            android:layout_marginStart="70dp"
+            android:layout_height="wrap_content"
+            android:text="@string/get_weather" />
 
-    <TextView
-        android:id="@+id/tvTemperature"
+        <com.google.android.material.floatingactionbutton.FloatingActionButton
+            android:layout_width="wrap_content"
+            android:layout_height="50dp"
+            android:id="@+id/fltBtn"
+            android:backgroundTint="?attr/actionModeSplitBackground"
+            android:src="@drawable/add_24"
+            android:contentDescription="@string/buttoncamera"
+            />
+
+
+
+    </RelativeLayout>
+
+
+    <LinearLayout
+        android:id="@+id/weatherDetails"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_above="@id/bottom"
+        android:layout_marginBottom="60dp"
+        android:orientation="vertical">
+
+        <TextView
+            android:id="@+id/tvTemperature"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textSize="30sp"
+            android:textColor="@color/white"
+            android:layout_marginTop="8dp" />
+
+
+        <TextView
+            android:id="@+id/tvWeatherDescription"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textSize="35sp"
+            android:textColor="@color/white"
+            android:layout_marginTop="16dp" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textColor="@color/white"
+            android:layout_marginTop="16dp"
+            android:textSize="30sp"
+            android:id="@+id/tvHumidity"/>
+
+    </LinearLayout>
+
+    <LinearLayout
+        android:id="@+id/imgWeather"
+        android:layout_width="250dp"
+        android:layout_height="250dp"
+        android:orientation="horizontal"
+        android:layout_above="@id/weatherDetails"
+        android:layout_marginBottom="40dp"
+        android:layout_marginStart="90dp">
+
+        <ImageView
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:src="@drawable/cloud"
+            android:contentDescription="@string/image"/>
+
+    </LinearLayout>
+
+    <LinearLayout
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_below="@id/tvWeatherDescription"
-        android:layout_marginTop="8dp" />
+        android:layout_above="@id/imgWeather"
+        android:layout_marginBottom="20dp">
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textSize="30sp"
+            android:textColor="@color/white"
+            android:id="@+id/tvName"/>
+
+
+    </LinearLayout>
+
+
+
 
 </RelativeLayout>

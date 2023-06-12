@@ -1,4 +1,7 @@
 <resources>
     <string name="app_name">My Application</string>
+    <string name="get_weather">Get Weather</string>
+    <string name="image">image</string>
+    <string name="buttoncamera">buttonCamera</string>
 
 </resources>
