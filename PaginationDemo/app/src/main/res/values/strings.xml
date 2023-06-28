@@ -1,0 +1,4 @@
+<resources>
+    <string name="app_name">Pagination Demo</string>
+    <string name="text_view">Text View</string>
+</resources>
